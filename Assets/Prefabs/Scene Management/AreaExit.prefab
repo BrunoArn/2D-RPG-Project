@@ -44,7 +44,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2daaa1a77c633bc4f8b227f7d223599f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TransitionName: 
+  TransitionName: East_Entrance
 --- !u!1 &5688990386882626969
 GameObject:
   m_ObjectHideFlags: 0
@@ -915,7 +915,7 @@ ParticleSystem:
     rateOverTime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 10
+      scalar: 5
       minScalar: 10
       maxCurve:
         serializedVersion: 2
@@ -4825,7 +4825,7 @@ ParticleSystemRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 6cfa9e58cbfb1d54e8c6c93b9f8eef39, type: 2}
+  - {fileID: 2100000, guid: 94740ebf9d735b74eb460d3024915c35, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -4971,5 +4971,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 08f58abd8c0b43f4c93ee9fc2b8950bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneToLoad: 
-  sceneTransitionName: 
+  sceneToLoad: Scene_2
+  sceneTransitionName: West_Entrance
