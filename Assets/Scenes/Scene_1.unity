@@ -23710,6 +23710,8 @@ MonoBehaviour:
   dashTime: 0.2
   dashCD: 0.25
   myTrailRenderer: {fileID: 420581722}
+  weaponCollider: {fileID: 579354264}
+  weaponSlash: {fileID: 1218442818}
 --- !u!70 &293347817
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -54756,7 +54758,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 69316f57a6e67d147955f8c8d4771880, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentActiveWeapon: {fileID: 0}
 --- !u!1001 &1959004109
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -16,6 +16,9 @@ public class PlayerController : Singleton<PlayerController>
     private float startingMoveSpeed;
     [SerializeField] private TrailRenderer myTrailRenderer;
 
+    [SerializeField] private Transform weaponCollider;
+    [SerializeField] private Transform weaponSlash;
+
     private PlayerControls playerControls;
     private Vector2 movement;
     private Rigidbody2D rb;
@@ -38,7 +41,6 @@ public class PlayerController : Singleton<PlayerController>
 
     private void Start() {
         playerControls.Combat.Dash.performed += _ => Dash(); 
-
         startingMoveSpeed = moveSpeed;       
     }
 
@@ -59,6 +61,14 @@ public class PlayerController : Singleton<PlayerController>
     private void FixedUpdate() {
         AdjustPlayerFacingDirection();
         Move();
+    }
+
+    public Transform GetWeaponCollider() {
+        return weaponCollider;
+    }
+
+    public Transform GetWeaponSlash() {
+        return weaponSlash;
     }
 
     //my methods
