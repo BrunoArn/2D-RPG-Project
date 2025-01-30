@@ -3,10 +3,9 @@ using UnityEditor.Tilemaps;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class PlayerController : MonoBehaviour
+public class PlayerController : Singleton<PlayerController>
 {
     public bool FacingLeft { get { return facingLeft;} }
-    public static PlayerController Instance;
 
     [SerializeField] private float moveSpeed = 1f;
 
@@ -26,9 +25,11 @@ public class PlayerController : MonoBehaviour
     private bool facingLeft = false;
     private bool isDashing = false;
 
-    //On awake initialize things
-    private void Awake() {
-        Instance = this;
+    //On awake initialize things, overriding o singleton
+    protected override void Awake() {
+        //esse é o singleton
+        base.Awake();
+        //esse é o override
         playerControls = new PlayerControls();
         rb = GetComponent<Rigidbody2D>();
         myAnimator = GetComponent<Animator>();
@@ -46,7 +47,7 @@ public class PlayerController : MonoBehaviour
         playerControls.Enable();
     }
     private void OnDisable() {
-        playerControls.Disable();
+        playerControls?.Disable();
     }
 
     //better for input
