@@ -2,18 +2,16 @@ using System.Collections;
 using Unity.Mathematics;
 using UnityEngine;
 
-public class SwordScript : MonoBehaviour
+public class SwordScript : MonoBehaviour, IWeapon
 {
     [SerializeField] private GameObject slashAnimPrefab;
     [SerializeField] private Transform slashAnimationSpawnPoint;
     [SerializeField] private Transform weaponCollider;
     [SerializeField] private float SwordAttackCD = .5f;
-
-    private PlayerControls playerControls;
+   
     private Animator myAnimator;
     private PlayerController playerController;
     private ActiveWeapon activeWeapon;
-    private bool attackButtonDown, isAttacking = false;
 
     private GameObject slashAnim;
 
@@ -22,49 +20,29 @@ public class SwordScript : MonoBehaviour
         playerController = GetComponentInParent<PlayerController>();
         activeWeapon = GetComponentInParent<ActiveWeapon>();
 
-        playerControls = new PlayerControls();
+        
         myAnimator = GetComponent<Animator>();
-    }
-
-    private void OnEnable() {
-        playerControls.Enable();
-    }
-    
-    
-    void Start() {
-        playerControls.Combat.Attack.started += _ => StartAttacking();
-        playerControls.Combat.Attack.canceled += _ => StopAttacking();
     }
 
     private void Update() {
         MouseFollowWithOffSet();
-        Attack();
     }
 
     //methods
-    private void StartAttacking() {
-        attackButtonDown = true;
-    }
 
-    private void StopAttacking() {
-        attackButtonDown = false;
-    }
-
-    private void Attack() {
-        if(attackButtonDown && !isAttacking){
-            isAttacking = true;
+    public void Attack() {
+            //isAttacking = true;
         myAnimator.SetTrigger("Attack");
         weaponCollider.gameObject.SetActive(true);
 
         slashAnim = Instantiate(slashAnimPrefab, slashAnimationSpawnPoint.position, quaternion.identity);
         slashAnim.transform.parent = this.transform.parent;
         StartCoroutine(AttackCDRoutine());
-        }
     }
 
     private IEnumerator AttackCDRoutine() {
         yield return new WaitForSeconds(SwordAttackCD);
-        isAttacking = false;
+        ActiveWeapon.Instance.ToggleIsAttacking(false);
     }
 
     //animation event
