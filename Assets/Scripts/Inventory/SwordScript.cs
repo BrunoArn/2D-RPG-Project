@@ -5,7 +5,6 @@ using UnityEngine;
 public class SwordScript : MonoBehaviour, IWeapon
 {
     [SerializeField] private GameObject slashAnimPrefab;
-    [SerializeField] private float SwordAttackCD = .5f;
     [SerializeField] private WeaponInfo weaponInfo;
    
     private Transform slashAnimationSpawnPoint;
@@ -33,7 +32,6 @@ public class SwordScript : MonoBehaviour, IWeapon
 
     //methods
     public void Attack() {
-            //isAttacking = true;
         myAnimator.SetTrigger("Attack");
         weaponCollider.gameObject.SetActive(true);
 
