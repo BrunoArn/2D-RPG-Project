@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 850592924950711802}
   - component: {fileID: 300142127923856725}
   - component: {fileID: 5675551227950114671}
+  - component: {fileID: 6170731876282442743}
   m_Layer: 0
   m_Name: Tree
   m_TagString: Untagged
@@ -161,8 +162,8 @@ CircleCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: -0.0020154715, y: 0.87642765}
-  m_Radius: 1.0671072
+  m_Offset: {x: -0.0020154715, y: 0.99232775}
+  m_Radius: 0.9512071
 --- !u!114 &5675551227950114671
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -177,3 +178,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   transparencyAmount: 0.8
   fadeTime: 0.4
+--- !u!114 &6170731876282442743
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 815862004141345347}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4011148e2a86bac4892ce862071b0799, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
