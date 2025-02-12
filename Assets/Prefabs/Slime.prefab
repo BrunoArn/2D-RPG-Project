@@ -104,6 +104,9 @@ GameObject:
   - component: {fileID: 5457504152643122963}
   - component: {fileID: 4394952265562319513}
   - component: {fileID: 7867865556121785998}
+  - component: {fileID: 7360855851808972758}
+  - component: {fileID: 665337269894756330}
+  - component: {fileID: 2658895985987183487}
   m_Layer: 0
   m_Name: Slime
   m_TagString: Untagged
@@ -258,6 +261,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8c878c4eb3bdb21409bd18ce20ae0bdc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  roamChangeDirFloat: 2
 --- !u!114 &6747798508144012717
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -285,6 +289,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startingHealth: 3
   deathVFXPrefab: {fileID: 4807523031851588571, guid: 2a5f2a5e4bf035f4abd6b3b06a2bfc63, type: 3}
+  knockBackThrust: 15
 --- !u!114 &4394952265562319513
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -312,3 +317,49 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   whiteFlashMat: {fileID: 2100000, guid: abf7b510dcd5d014d96326ba11ccab5b, type: 2}
   restoreDefaultMatTime: 0.2
+--- !u!95 &7360855851808972758
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7748990695336001737}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 7e9433907ee06a54796c4ce64e7b6dfd, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &665337269894756330
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7748990695336001737}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ed0fc7d8650182419075b057bcda3ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!210 &2658895985987183487
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7748990695336001737}
+  m_Enabled: 1
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_SortAtRoot: 0
