@@ -24,7 +24,6 @@ public class Projectile : MonoBehaviour
         Indestructable indestructable = other.gameObject.GetComponent<Indestructable>();
 
         if (!other.isTrigger && (enemyHealth || indestructable)) {
-            enemyHealth?.TakeDamage(weaponInfo.weaponDamage);
             Instantiate(particleOnHitPrefabVFX, transform.position, Quaternion.identity);
             Destroy(this.gameObject);
         }

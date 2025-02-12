@@ -42110,7 +42110,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e611f4699128344418626ed22a405849, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damageAmount: 1
 --- !u!1001 &582739379
 PrefabInstance:
   m_ObjectHideFlags: 0
