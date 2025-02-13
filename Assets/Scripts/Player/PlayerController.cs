@@ -51,6 +51,7 @@ public class PlayerController : Singleton<PlayerController>
     private void OnEnable() {
         playerControls.Enable();
     }
+    
     private void OnDisable() {
         playerControls?.Disable();
     }
