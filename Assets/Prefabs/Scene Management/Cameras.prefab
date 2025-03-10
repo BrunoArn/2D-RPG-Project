@@ -29,7 +29,7 @@ Transform:
   m_GameObject: {fileID: 1892158441915593310}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.020218134, y: -0.7214607, z: -9.947511}
+  m_LocalPosition: {x: -4.3449793, y: 4.789853, z: -9.947511}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -282,7 +282,7 @@ Transform:
   m_GameObject: {fileID: 7190332231927486649}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.020225167, y: -2.229251, z: -9.947511}
+  m_LocalPosition: {x: -4.3449793, y: 4.789853, z: -9.947511}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -380,6 +380,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4135145674887534143}
   - component: {fileID: 1857923753144346604}
+  - component: {fileID: 697587083010904989}
   m_Layer: 0
   m_Name: State-Driven Camera
   m_TagString: Untagged
@@ -444,6 +445,29 @@ MonoBehaviour:
   HashOfParent: []
   m_LegacyLookAt: {fileID: 0}
   m_LegacyFollow: {fileID: 0}
+--- !u!114 &697587083010904989
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8988738898309946916}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00b2d199b96b516448144ab30fb26aed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ApplyAfter: 2
+  ChannelMask: 1
+  Gain: 1
+  Use2DDistance: 0
+  UseCameraSpace: 1
+  ReactionSettings:
+    m_SecondaryNoise: {fileID: 0}
+    AmplitudeGain: 1
+    FrequencyGain: 1
+    Duration: 1
+    m_NoiseOffsets: {x: 0, y: 0, z: 0}
 --- !u!1 &9126801686391836838
 GameObject:
   m_ObjectHideFlags: 0
@@ -522,8 +546,12 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: -19, y: 23}
-      - {x: -19, y: -7.7214594}
-      - {x: 39.309307, y: -7.721459}
-      - {x: 39.30931, y: 23}
+    - - {x: 15.979124, y: 29.852646}
+      - {x: 16.074915, y: 25.09039}
+      - {x: -25.613659, y: 25.248642}
+      - {x: -25.745932, y: -13.14466}
+      - {x: 1.2061813, y: -13.40469}
+      - {x: 17.459581, y: -15.530643}
+      - {x: 38.64794, y: -15.790124}
+      - {x: 39.57386, y: 30.275028}
   m_UseDelaunayMesh: 0

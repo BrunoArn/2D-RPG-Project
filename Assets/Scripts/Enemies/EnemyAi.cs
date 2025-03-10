@@ -11,6 +11,7 @@ public class EnemyAi : MonoBehaviour
     [SerializeField] private float attackCooldown = 3f;
     [SerializeField] private bool stopMovingWhenAttacking = false;
 
+    private bool canWalk = true;
     private bool canAttack = true;
 
     private enum State {
@@ -87,6 +88,7 @@ public class EnemyAi : MonoBehaviour
     private IEnumerator AttackCooldownRoutine() {
         yield return new WaitForSeconds(attackCooldown);
         canAttack = true;
+        canWalk = true;
     }
 
     private Vector2 GetRoamingPosition() {
