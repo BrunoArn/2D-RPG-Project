@@ -5,7 +5,7 @@ using UnityEngine;
 public class EnemyAi : MonoBehaviour
 {
     [SerializeField] private float roamChangeDirFloat = 2f;
-    [SerializeField] private float attackRange = 5f;
+    [SerializeField] private float attackRange = 0f;
     // vai pegar o IEnemy que for e vai meter bronca no attack independentemente
     [SerializeField] private MonoBehaviour enemyType;
     [SerializeField] private float attackCooldown = 3f;
