@@ -70765,12 +70765,20 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4534511115664531266, guid: 612d7ba9803d6224d9334d9b92383924, type: 3}
+      propertyPath: stagger
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4534511115664531266, guid: 612d7ba9803d6224d9334d9b92383924, type: 3}
       propertyPath: restTime
-      value: 0.5
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4534511115664531266, guid: 612d7ba9803d6224d9334d9b92383924, type: 3}
+      propertyPath: oscillate
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4534511115664531266, guid: 612d7ba9803d6224d9334d9b92383924, type: 3}
       propertyPath: burstCount
-      value: 5
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 4534511115664531266, guid: 612d7ba9803d6224d9334d9b92383924, type: 3}
       propertyPath: angleSpread
@@ -70786,7 +70794,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4534511115664531266, guid: 612d7ba9803d6224d9334d9b92383924, type: 3}
       propertyPath: timeBetweenBursts
-      value: 0.3
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4534511115664531266, guid: 612d7ba9803d6224d9334d9b92383924, type: 3}
       propertyPath: projectilerPerBurst
@@ -70794,7 +70802,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4534511115664531266, guid: 612d7ba9803d6224d9334d9b92383924, type: 3}
       propertyPath: projectilesPerBurst
-      value: 5
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
