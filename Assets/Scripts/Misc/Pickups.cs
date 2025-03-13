@@ -3,6 +3,13 @@ using UnityEngine;
 
 public class Pickups : MonoBehaviour
 {
+    enum PickUpType {
+        GoldCoin,
+        Stamina,
+        Health,
+    }
+
+    [SerializeField] private PickUpType pickUpType;
 
     [SerializeField] private float pickUpDistance = 5f;
     [SerializeField] private float accelerationRate = .2f;
@@ -45,8 +52,8 @@ public class Pickups : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Debug.Log("entrou");
         if (collision.gameObject.GetComponent<PlayerController>()) {
+            DetectPickUptype();
             Destroy(gameObject);
         }
     }
@@ -69,6 +76,23 @@ public class Pickups : MonoBehaviour
 
             transform.position = Vector2.Lerp(startPoint, endPoint, linearT) + new Vector2(0f, height);
             yield return null;
+        }
+    }
+
+    void DetectPickUptype() {
+        switch (pickUpType) {
+            case PickUpType.GoldCoin:
+                //do gold coin
+                Debug.Log("GOLD COIN");
+                break;
+            case PickUpType.Health:
+                PlayerHealth.Instance.HealPlayer();
+                Debug.Log("Health");
+                break;
+            case PickUpType.Stamina:
+                //do Stamina thing
+                Debug.Log("Staminas");
+                break;
         }
     }
 }

@@ -10,12 +10,11 @@ GameObject:
   m_Component:
   - component: {fileID: 508676378306146809}
   - component: {fileID: 4570973588347165341}
-  - component: {fileID: 5594207888078909467}
   - component: {fileID: 1542899594364354499}
   - component: {fileID: 9162253001394129432}
   - component: {fileID: -2775387498860122011}
   m_Layer: 0
-  m_Name: Gold Coin
+  m_Name: Health PickUp
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -59,7 +58,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: 2100000, guid: e3360045e84ec6f4c956027c7ac24365, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -80,7 +79,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -1782204238, guid: bac862fb79b537344bac3f9504a545c9, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 7df83703d15b745439d839880b6906e8, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -91,28 +90,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!95 &5594207888078909467
-Animator:
-  serializedVersion: 7
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3707522445030589104}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: e976b4ec72e4cff45800de88fbfd9927, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_AnimatePhysics: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
 --- !u!70 &1542899594364354499
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -189,6 +166,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e31332abdeabdea4d86ab203176d0c62, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pickUpType: 2
   pickUpDistance: 3
   accelerationRate: 2
   animationCurve:
