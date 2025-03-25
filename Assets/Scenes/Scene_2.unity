@@ -71098,8 +71098,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: Managers
       objectReference: {fileID: 0}
+    - target: {fileID: 8431348403150292899, guid: 0c8938ba4cb4dae42bd04e44150141cf, type: 3}
+      propertyPath: m_Size.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8431348403150292899, guid: 0c8938ba4cb4dae42bd04e44150141cf, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 83d0533993ba6674f84463f3da825d0b, type: 3}
+    - target: {fileID: 8431348403150292899, guid: 0c8938ba4cb4dae42bd04e44150141cf, type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 2833268835394551830, guid: 0c8938ba4cb4dae42bd04e44150141cf, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0c8938ba4cb4dae42bd04e44150141cf, type: 3}
