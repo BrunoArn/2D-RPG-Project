@@ -85,7 +85,7 @@ public class PlayerController : Singleton<PlayerController>
     }
     //used in fixed
     private void Move() {
-        if (knockback.GettingKnockBack || PlayerHealth.Instance.isDead) { return; }
+        if (knockback.GettingKnockBack || PlayerHealth.Instance.IsDead) { return; }
         rb.MovePosition(rb.position + movement * moveSpeed *Time.fixedDeltaTime);
     }
 
