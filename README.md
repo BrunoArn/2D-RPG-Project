@@ -9,11 +9,12 @@ The project includes multiple enemy types, bullet hell patterns, and interactabl
   - Basic movement and chase logic
   - Bullet hell-style projectile systems
   - Customizable parameters for each enemy via ScriptableObjects or inspector controls
+  ![Demo](ReadMeImages/monsters.gif)
 
 - 🎇 Bullet Hell System
   - Modular system to define projectile spread, patterns, timing, and direction
   - Parameterized from the Editor for quick iteration
-
+  ![Demo](ReadMeImages/Bullet-Hell.gif)
 
 - 🧱 Scenery and Environment Logic
   - Interactable objects (e.g., doors, switches, hazards)
