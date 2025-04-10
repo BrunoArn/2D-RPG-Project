@@ -5,7 +5,11 @@ This is a 2D top-down game developed in Unity, primarily focused on exploring an
 The project includes multiple enemy types, bullet hell patterns, and interactable scenery elements. It serves as a learning-focused environment to experiment with responsive gameplay mechanics, efficient editor tooling, and scalable architecture.
 
 ## 🚀 Features
-![Demo](ReadMeImages/features_box.png)
+<p align="center">
+  <img src="ReadMeImages/features_box.png" width="660"/>
+</p>
+
+
 - 🔫 Multiple Enemy Types
   - Basic movement and chase logic
   - Bullet hell-style projectile systems
