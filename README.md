@@ -42,10 +42,10 @@ The project includes multiple enemy types, bullet hell patterns, and interactabl
 <p align="center">
   <img src="ReadMeImages/techStack.png" width="660"/>
 </p>
-- Unity 6 (6000.0.30f1)
-- C#
-- URP
-- GitHub
+  - Unity 6 (6000.0.30f1)
+  - C#
+  - URP
+  - GitHub
 
 ## 📦 Setup
 
