@@ -46,6 +46,61 @@ The project includes multiple enemy types, bullet hell patterns, and interactabl
 - URP
 - GitHub
 
+## Project Structure
+
+Assets/
+├── Animation/                  # Animation assets organized by object
+│   ├── Bow/
+│   ├── Flower/
+│   ├── Gold Coin/
+│   ├── Grape/
+│   ├── NPCs/
+│   ├── Player/
+│   ├── Slime/
+│   ├── Staff/
+│   ├── Sword/
+│   └── Torch/
+├── Material/
+│   └── Shaders/               # Custom shaders (if any)
+├── Prefabs/                   # Reusable GameObjects
+│   ├── Enemies/
+│   ├── Environment/
+│   ├── PickUps/
+│   ├── Scene Management/
+│   ├── VFX/
+│   └── Weapons/
+├── Resources/                 # Assets loaded dynamically via Resources.Load
+├── Scenes/
+│   ├── Scene_1/
+│   └── Scene_2/
+├── Scripts/                   # Core and gameplay scripts
+│   ├── Enemies/
+│   ├── Inventory/
+│   ├── Misc/
+│   ├── Player/
+│   ├── Scene Management/
+│   ├── Scriptable Objects/
+│   └── Weapons/
+├── Settings/
+│   └── Scenes/                # Scene settings or configuration assets
+├── Sprite/                    # Sprite assets by category
+│   ├── Buildings/
+│   ├── Enemies/
+│   ├── Environment/
+│   ├── Inventory UI/
+│   ├── Misc/
+│   ├── NPC's/
+│   ├── Player/
+│   └── UI/
+├── TextMesh Pro/              # TMP fonts, shaders, and sprites
+│   ├── Fonts/
+│   ├── Resources/
+│   ├── Shaders/
+│   └── Sprites/
+└── Tilemap/
+    └── Tiles/                 # Tile assets for tilemaps
+
+
 ## 📦 Setup
 
 ```bash
