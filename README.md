@@ -4,7 +4,7 @@ This is a 2D top-down game developed in Unity, primarily focused on exploring an
 
 The project includes multiple enemy types, bullet hell patterns, and interactable scenery elements. It serves as a learning-focused environment to experiment with responsive gameplay mechanics, efficient editor tooling, and scalable architecture.
 
-## 🚀 Features
+##
 <p align="center">
   <img src="ReadMeImages/features_box.png" width="660"/>
 </p>
@@ -38,11 +38,10 @@ The project includes multiple enemy types, bullet hell patterns, and interactabl
   - Serialized fields for quick tuning
   - Organized folder structure and naming conventions
 
-## 🎥 Demo
-
-![Demo](ReadMeImages/teste1.gif)
-
-## 🛠️ Tech Stack
+##
+<p align="center">
+  <img src="ReadMeImages/techStack.png" width="660"/>
+</p>
 - Unity 6 (6000.0.30f1)
 - C#
 - URP
