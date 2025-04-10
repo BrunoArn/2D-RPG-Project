@@ -17,25 +17,21 @@ The project includes multiple enemy types, bullet hell patterns, and interactabl
   ![Demo](ReadMeImages/Bullet-Hell.gif)
 
 - 🧱 Scenery and Environment Logic
-  - Interactable objects (e.g., doors, switches, hazards)
+  - Interactable objects
   - Dynamic effects and feedback
   - Editor tooling for positioning, grouping, and controlling behaviors
+    ![Demo](ReadMeImages/Scenery.gif)
 
 - 🎮 Game Feel Focus
-  - Screen shake, hit pause, impact sounds
+  - Screen shake, hit pause
   - Smooth player movement and input buffering
   - Feedback-driven interactions
+      ![Demo](ReadMeImages/feedbacks.gif)
 
 - 🛠️ Editor Tooling
   - Custom inspectors and attributes
   - Serialized fields for quick tuning
   - Organized folder structure and naming conventions
-
-## 📸 Screenshots
-
-![Screenshot](ReadMeImages/1.png)
-![Screenshot](ReadMeImages/2.png)
-![Screenshot](ReadMeImages/3.png)
 
 ## 🎥 Demo
 
