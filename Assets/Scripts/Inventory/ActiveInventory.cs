@@ -1,23 +1,29 @@
 using UnityEngine;
 
-public class ActiveInventory : MonoBehaviour
+public class ActiveInventory : Singleton<ActiveInventory>
 {
     private int activeSlotIndexNum = 0;
 
     private PlayerControls playerControls;
 
-    private void Awake() {
+    protected override void Awake() {
+        base.Awake();
         playerControls = new PlayerControls();
     }
 
     private void Start() {
         playerControls.Inventory.Keyboard.performed += ctx => ToggleActiveSlot((int)ctx.ReadValue<float>());
         //starts with sword
-        ToggleActiveHighlight(0);
+        EquipsStartingWeapon();
+        
     }
 
     private void OnEnable() {
         playerControls.Enable();
+    }
+
+    public void EquipsStartingWeapon() {
+        ToggleActiveHighlight(0);
     }
 
     private void ToggleActiveSlot(int numValue) {
@@ -38,6 +44,7 @@ public class ActiveInventory : MonoBehaviour
     }
 
     private void ChangeActiveWeapon() {
+        if ( PlayerHealth.Instance.IsDead) { return ;}
         if(ActiveWeapon.Instance.CurrentActiveWeapon != null) {
             Destroy(ActiveWeapon.Instance.CurrentActiveWeapon.gameObject);
         }

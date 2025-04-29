@@ -44,7 +44,8 @@ public class PlayerController : Singleton<PlayerController>
 
     private void Start() {
         playerControls.Combat.Dash.performed += _ => Dash(); 
-        startingMoveSpeed = moveSpeed;       
+        startingMoveSpeed = moveSpeed;      
+        ActiveInventory.Instance.EquipsStartingWeapon();
     }
 
     //Enables or disables things
@@ -53,7 +54,7 @@ public class PlayerController : Singleton<PlayerController>
     }
     
     private void OnDisable() {
-        playerControls?.Disable();
+        playerControls.Disable();
     }
 
     //better for input
@@ -84,7 +85,7 @@ public class PlayerController : Singleton<PlayerController>
     }
     //used in fixed
     private void Move() {
-        if (knockback.GettingKnockBack) { return; }
+        if (knockback.GettingKnockBack || PlayerHealth.Instance.IsDead) { return; }
         rb.MovePosition(rb.position + movement * moveSpeed *Time.fixedDeltaTime);
     }
 
@@ -102,11 +103,13 @@ public class PlayerController : Singleton<PlayerController>
     }
 
     private void Dash() {
-        if(!isDashing){
-        isDashing = true;
-        moveSpeed *= dashSpeed;
-        myTrailRenderer.emitting = true;
-        StartCoroutine(EndDashRoutine());
+        if(!isDashing && Stamina.Instance.CurrentStamina > 0){
+            Stamina.Instance.UseStamina();
+            
+            isDashing = true;
+            moveSpeed *= dashSpeed;
+            myTrailRenderer.emitting = true;
+            StartCoroutine(EndDashRoutine());
         }
     }
 
